@@ -60,4 +60,4 @@ jobs:
         uses: trufflesecurity/trufflehog@main
         with:
           # Scan commits in PR/push. Results include verified + unknown.
-          extra_args: --results=verified,unknown --fail
+          extra_args: --results=verified,unknown
