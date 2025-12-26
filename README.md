@@ -19,27 +19,38 @@ SAGAPI est un **monorepo** conçu pour fournir une **API de gouvernance** et des
 
 ## Structure du repo (actuelle)
 
-```text
-apps/
-  frontend/
-    shell/     # host / routing / auth (prévu)
-    ops/       # micro-frontend Ops (prévu)
-    admin/     # micro-frontend Admin (prévu)
-  backend/
-    governance/ # API “cerveau” (prévu)
-    connector/  # API connecteur AD isolé (prévu)
-  data/
-    db-migrations/ # migrations / outillage data (prévu)
-docs/
-  architecture/    # SAD complet
-  adrs/            # décisions d’architecture
-  governance/      # gouvernance du projet
-  runbooks/        #
-  wiki/            #
-infra/             # infra-as-code (prévu)
-libs/
-  shared/contracts/ # contrats / DTO (prévu)
-  ui/components/    # lib UI (prévu)
+```Text
+/ (Root)
+├── /apps
+│   ├── /frontend             # Applications Web (React)
+│   │   ├── /shell            # Application hôte (Auth & Routing)
+│   │   ├── /ops              # Micro-frontend "Opérations" (Espace User)
+│   │   └── /admin            # Micro-frontend "Administration" (Espace Admin)
+│   │
+│   ├── /backend              # Services Serverless (.NET 8)
+│   │   ├── /governance       # API Cerveau décisionnel (Logique Métier)
+│   │   └── /connector        # API Connecteur AD isolé (Zero Trust)
+│   │
+│   └── /data                 # Outils de données
+│       └── /db-migrations    # Scripts de gestion schéma DynamoDB
+│
+├── /libs                     # Bibliothèques Partagées (Non déployables seules)
+│   ├── /shared               # Code agnostique (C# & TS)
+│   │   └── /contracts        # DTOs, Enums et Interfaces partagés (Source de vérité)
+│   └── /ui                   # Composants React
+│       └── /components       # Design System (Boutons, Tableaux, Layouts)
+│
+├── /docs                     # Documentation
+│   ├── /architecture         # Diagrammes et SAD
+│   ├── /governance
+│   ├── /runbooks
+│   ├── /wiki
+│   └── /adrs                 # Architecture Decision Records
+│
+├── /scripts                  
+│   └── /security
+│
+└── /infra                    # Infrastructure as Code (Terraform/CDK)
 ```
 
 ---
