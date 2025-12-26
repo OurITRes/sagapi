@@ -189,10 +189,10 @@ Pattern **Identity Strategy** pour l'isolation stricte :
 
 ### 5. Annexes (Diagrammes & Matrices)
 
-#### A. Diagramme de Contexte (Business View)graph TD
+#### A. Diagramme de Contexte (Business View)
 
 ```mermaid
-graph TB
+graph TD
     subgraph "Acteurs"
         User((Demandeur))
         Admin((Admin Système))
@@ -222,9 +222,10 @@ graph TB
     UI -.->|Authentification| IdP
 ```
 
-#### B. Diagramme d'Architecture Détaillée (AWS)graph TB
+#### B. Diagramme d'Architecture Détaillée (AWS)
 
 ```mermaid
+graph TB
     subgraph "AWS Cloud (VPC)"
         APIGW[API Gateway]
         
@@ -303,10 +304,10 @@ graph TB
 
 #### C. Diagrammes de Séquence (CRUD & Use Cases)Cette section couvre l'ensemble des interactions du cycle de vie des comptes (Create, Read, Update, Delete) impliquant les différents personas
 
-##### C.1 Use Case: READ (Consultation Dashboard & Audit) - User & AuditorCe scénario montre comment les utilisateurs consultent leurs comptes et comment les auditeurs accèdent aux logs.sequence
+##### C.1 Use Case: READ (Consultation Dashboard & Audit) - User & AuditorCe scénario montre comment les utilisateurs consultent leurs comptes et comment les auditeurs accèdent aux logs
 
 ```mermaid
-Diagram
+sequenceDiagram
     participant U as User (UI)
     participant A as Auditor (UI)
     participant API as API Governance
@@ -326,10 +327,10 @@ Diagram
     API-->>A: JSON Report
 ```
 
-##### C.2 Use Case: CREATE (Création Standard) - UserScénario nominal de création d'un compte de service standard.sequence
+##### C.2 Use Case: CREATE (Création Standard) - UserScénario nominal de création d'un compte de service standard
 
 ```mermaid
-Diagram
+sequenceDiagram
     participant User as Demandeur (UI)
     participant Gov as Service Governance
     participant DB as DynamoDB
@@ -356,10 +357,10 @@ Diagram
     deactivate Gov
 ```
 
-##### C.3 Use Case: UPDATE (Rotation de Mot de Passe) - Operator/UserModification sensible nécessitant une action technique immédiate.sequence
+##### C.3 Use Case: UPDATE (Rotation de Mot de Passe) - Operator/UserModification sensible nécessitant une action technique immédiate
 
 ```mermaid
-Diagram
+sequenceDiagram
     participant Op as Operator/User
     participant Gov as Service Governance
     participant Conn as AD Connector
@@ -387,10 +388,10 @@ Diagram
     deactivate Gov
 ```
 
-##### C.4 Use Case: DELETE (Suppression avec Approbation) - User & ApproverScénario de suppression nécessitant une validation humaine (Approver) avant exécution.sequence
+##### C.4 Use Case: DELETE (Suppression avec Approbation) - User & ApproverScénario de suppression nécessitant une validation humaine (Approver) avant exécution
 
 ```mermaid
-Diagram
+sequenceDiagram
     participant U as User
     participant App as Approver
     participant Gov as Service Governance
