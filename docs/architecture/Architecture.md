@@ -302,9 +302,13 @@ graph TB
     ADC -.->|Sync| CorporateUsers
 ```
 
-#### C. Diagrammes de Séquence (CRUD & Use Cases)Cette section couvre l'ensemble des interactions du cycle de vie des comptes (Create, Read, Update, Delete) impliquant les différents personas
+#### C. Diagrammes de Séquence (CRUD & Use Cases)
 
-##### C.1 Use Case: READ (Consultation Dashboard & Audit) - User & AuditorCe scénario montre comment les utilisateurs consultent leurs comptes et comment les auditeurs accèdent aux logs
+Cette section couvre l'ensemble des interactions du cycle de vie des comptes (Create, Read, Update, Delete) impliquant les différents personas
+
+##### C.1 Use Case: READ (Consultation Dashboard & Audit) - User & Auditor
+
+Ce scénario montre comment les utilisateurs consultent leurs comptes et comment les auditeurs accèdent aux logs
 
 ```mermaid
 sequenceDiagram
@@ -327,7 +331,9 @@ sequenceDiagram
     API-->>A: JSON Report
 ```
 
-##### C.2 Use Case: CREATE (Création Standard) - UserScénario nominal de création d'un compte de service standard
+##### C.2 Use Case: CREATE (Création Standard) - User
+
+Scénario nominal de création d'un compte de service standard
 
 ```mermaid
 sequenceDiagram
@@ -357,7 +363,9 @@ sequenceDiagram
     deactivate Gov
 ```
 
-##### C.3 Use Case: UPDATE (Rotation de Mot de Passe) - Operator/UserModification sensible nécessitant une action technique immédiate
+##### C.3 Use Case: UPDATE (Rotation de Mot de Passe) - Operator/User
+
+Modification sensible nécessitant une action technique immédiate
 
 ```mermaid
 sequenceDiagram
@@ -388,7 +396,9 @@ sequenceDiagram
     deactivate Gov
 ```
 
-##### C.4 Use Case: DELETE (Suppression avec Approbation) - User & ApproverScénario de suppression nécessitant une validation humaine (Approver) avant exécution
+##### C.4 Use Case: DELETE (Suppression avec Approbation) - User & Approver
+
+Scénario de suppression nécessitant une validation humaine (Approver) avant exécution
 
 ```mermaid
 sequenceDiagram
