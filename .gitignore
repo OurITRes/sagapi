@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+dist/
+bin/
+obj/
+
+# Environment Variables
+.env
+.env.local
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.user
+
+# Nx & Angular
+.nx/
+.angular/
+
+# AWS & Terraform
+.tfstate
+.terraform/
+
+# Logs
+npm-debug.log
+yarn-error.log
