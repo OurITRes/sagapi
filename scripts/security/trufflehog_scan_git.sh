@@ -6,4 +6,4 @@ set -euo pipefail
 
 REPO_DIR="$(pwd)"
 
-docker run --rm -v "${REPO_DIR}:/repo" ghcr.io/trufflesecurity/trufflehog:latest   git "file:///repo" --results=verified
+docker run --rm -v "${REPO_DIR}:/repo" ghcr.io/trufflesecurity/trufflehog:latest git "file:///repo" --results=verified
