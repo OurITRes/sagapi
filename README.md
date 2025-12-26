@@ -5,8 +5,6 @@ SAGAPI est un **monorepo** conçu pour fournir une **API de gouvernance** et des
 > ⚠️ **Stratégie “Privé puis Public”**  
 > Le projet contient de la logique de sécurité (même si Zero Trust). Le dépôt doit rester **Privé** tant que la checklist “Avant de passer en Public” n’est pas validée.
 
----
-
 ## Documentation
 
 - **Architecture / SAD (document maître)** : [`/docs/SAGAPI_Architecture_SAD.md`](docs/SAGAPI_Architecture_SAD.md)  
@@ -14,8 +12,6 @@ SAGAPI est un **monorepo** conçu pour fournir une **API de gouvernance** et des
 - **Gouvernance (WIP)** : [`/docs/GOVERNANCE.md`](docs/GOVERNANCE.md)
 - **Runbooks** : [`/docs/runbooks/`](docs/runbooks/)
 - **Wiki GitHub (recommandé)** : pages sources à copier depuis [`/docs/wiki/`](docs/wiki/)
-
----
 
 ## Structure du repo (actuelle)
 
@@ -53,8 +49,6 @@ SAGAPI est un **monorepo** conçu pour fournir une **API de gouvernance** et des
 └── /infra                    # Infrastructure as Code (Terraform/CDK)
 ```
 
----
-
 ## Pré-requis (développement local)
 
 Selon le SAD, la cible est typiquement :
@@ -65,8 +59,6 @@ Selon le SAD, la cible est typiquement :
 
 > ✅ Le dépôt est actuellement un **squelette** (placeholder `.gitkeep`).  
 > Les commandes ci-dessous sont fournies comme **conventions** et seront finalisées lorsque le tooling sera présent (ex: `package.json`, `nx.json`, solutions .NET, etc.).
-
----
 
 ## Installation (WIP)
 
@@ -86,8 +78,6 @@ npm ci
 ```bash
 dotnet restore
 ```
-
----
 
 ## Builds & Tests (WIP)
 
@@ -119,8 +109,6 @@ dotnet restore
   dotnet build -c Release
   ```
 
----
-
 ## Sécurité — Avant de passer en Public (checklist)
 
 - [ ] **Scan de secrets** (historique git complet) : TruffleHog et/ou git-secrets
@@ -131,14 +119,10 @@ dotnet restore
 
 Scripts de scan (optionnels) : [`/scripts/security/`](scripts/security/)
 
----
-
 ## Contribution
 
 - Voir : [`CONTRIBUTING.md`](CONTRIBUTING.md)
 - PR obligatoire vers `master` (pas de push direct), CI verte, revue requise.
-
----
 
 ## Gouvernance
 
