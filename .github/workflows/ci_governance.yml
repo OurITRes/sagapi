@@ -1,0 +1,63 @@
+name: CI - Governance & Security Guardrails
+
+on:
+  pull_request:
+  push:
+    branches: [ "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  governance:
+    name: Governance checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Required files present
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            "README.md"
+            "LICENSE"
+            "SECURITY.md"
+            "CONTRIBUTING.md"
+            "docs/GOVERNANCE.md"
+            ".github/CODEOWNERS"
+            ".github/dependabot.yml"
+            ".github/ISSUE_TEMPLATE/config.yml"
+          )
+          for f in "${required[@]}"; do
+            if [[ ! -f "$f" ]]; then
+              echo "Missing required file: $f"
+              exit 1
+            fi
+          done
+          echo "All required governance files present."
+
+      - name: Scripts are executable (best-effort)
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -d scripts/security ]]; then
+            chmod +x scripts/security/*.sh || true
+            echo "scripts/security marked executable (if any)."
+          fi
+
+  secrets:
+    name: Secret scanning (TruffleHog)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: TruffleHog (git scan)
+        uses: trufflesecurity/trufflehog@main
+        with:
+          # Scan commits in PR/push. Results include verified + unknown.
+          extra_args: --results=verified,unknown --fail

@@ -1,0 +1,58 @@
+name: ✨ Feature request
+description: Proposer une évolution (hors sécurité)
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Pour les demandes qui impliquent une modification de posture sécurité, merci d'ajouter un minimum de contexte "Zero Trust" et l'impact attendu.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Composant
+      options:
+        - Frontend
+        - Governance-API
+        - Connector
+        - Infra
+        - Docs
+        - Autre
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème / besoin
+      description: Quel problème cherchez-vous à résoudre ?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposition
+      description: Décrivez la solution proposée (API, flows, UX, etc.)
+    validations:
+      required: true
+  - type: textarea
+    id: security
+    attributes:
+      label: Impact sécurité / Zero Trust
+      description: AuthN/AuthZ, secrets, moindre privilège, audit, risques
+      placeholder: |
+        - AuthN:
+        - AuthZ:
+        - Secrets:
+        - Audit:
+        - Risques:
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critères d'acceptation
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true

@@ -1,6 +1,7 @@
 # Architecture Solution : SAGAPI (Service Account Governance & Automation Programmable Interface)
 
 **Type** : Document d'Architecture Logicielle (SAD) - Format TOGAF
+
 **Approche** : Monorepo Modulaire, Serverless, Zero TrustStatut : Version Validée pour le Développement.
 
 ## 1.Business Architecture (Solution Métier)
@@ -66,7 +67,13 @@ La structure a été organisée selon les standards Nx "Grouped" pour séparer c
 │
 ├── /docs                     # Documentation
 │   ├── /architecture         # Diagrammes et SAD
+│   ├── /governance
+│   ├── /runbooks
+│   ├── /wiki
 │   └── /adrs                 # Architecture Decision Records
+│
+├── /scripts                  
+│   └── /security
 │
 └── /infra                    # Infrastructure as Code (Terraform/CDK)
 ```

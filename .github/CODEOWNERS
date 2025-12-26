@@ -1,0 +1,37 @@
+# CODEOWNERS — SAGAPI
+
+<!--
+📌 Remplacez les équipes / comptes ci-dessous par vos vrais owners.
+Recommandation : créer des teams dans l'org GitHub :
+  - @OurITRes/sagapi-maintainers
+  - @OurITRes/sagapi-security
+  - @OurITRes/sagapi-backend
+  - @OurITRes/sagapi-frontend
+  - @OurITRes/sagapi-infra
+
+GitHub lit le CODEOWNERS dans cet ordre : .github/ → root → docs/ (il prend le 1er trouvé).
+Source: GitHub Docs "About code owners".
+-->
+
+## Par défaut, tout est reviewé par les maintainers
+
+* @OurITRes/sagapi-maintainers
+
+## Zones sensibles : sécurité / infra / CI
+
+/infra/ @OurITRes/sagapi-infra @OurITRes/sagapi-security
+/scripts/security/ @OurITRes/sagapi-security
+/.github/ @OurITRes/sagapi-maintainers @OurITRes/sagapi-security
+/docs/governance/ @OurITRes/sagapi-maintainers @OurITRes/sagapi-security
+
+## Backend
+
+/apps/backend/ @OurITRes/sagapi-backend @OurITRes/sagapi-security
+
+## Frontend
+
+/apps/frontend/ @OurITRes/sagapi-frontend
+
+## Librairies partagées
+
+/libs/ @OurITRes/sagapi-maintainers

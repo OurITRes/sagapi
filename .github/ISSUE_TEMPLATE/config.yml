@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔐 Security vulnerability (private)
+    url: https://github.com/OurITRes/sagapi/security/advisories/new
+    about: Reportez une vulnérabilité en privé via GitHub Security Advisories (ne pas ouvrir d'issue publique).
+  - name: 📄 Security policy
+    url: https://github.com/OurITRes/sagapi/blob/master/SECURITY.md
+    about: Procédure de divulgation et informations de contact.
