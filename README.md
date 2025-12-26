@@ -1,4 +1,6 @@
-# SAGAPI — Service Account Governance & Automation Programmable Interface
+# [badge CI] [badge license]
+
+## SAGAPI — Service Account Governance & Automation Programmable Interface
 
 SAGAPI est un **monorepo** conçu pour fournir une **API de gouvernance** et des **connecteurs** permettant d’automatiser des opérations de sécurité (ex: gouvernance de comptes de service, rotation, approbations), dans une posture **Zero Trust**.
 
