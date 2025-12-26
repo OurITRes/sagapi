@@ -1,0 +1,3 @@
+# Ajouté automatiquement — vérifier
+# ShellCheck configuration
+exclude=SC1091,SC2154
