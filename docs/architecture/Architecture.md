@@ -192,7 +192,7 @@ Pattern **Identity Strategy** pour l'isolation stricte :
 #### A. Diagramme de Contexte (Business View)graph TD
 
 ```mermaid
-
+graph TB
     subgraph "Acteurs"
         User((Demandeur))
         Admin((Admin Système))
