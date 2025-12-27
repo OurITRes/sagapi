@@ -116,7 +116,7 @@ dotnet restore
 ## Sécurité — checklist
 
 - [x] **Scan de secrets** (historique git complet) : TruffleHog et/ou git-secrets
-- [x] **Licence** : respecter la `LICENSE` (AGPLv3) 
+- [x] **Licence** : respecter la `LICENSE` (AGPLv3)
 - [x] **Security policy** : `SECURITY.md` (reporting privé, pas d’issue publique)
 - [x] **Rulesets** activés sur `master` (PR obligatoire, checks, linear history, no bypass)
 - [x] **Documentation** à jour (README + Wiki + runbooks)
