@@ -7,10 +7,6 @@ SAGAPI est un **monorepo** conçu pour fournir une **API de gouvernance** et des
 d’automatiser des opérations de sécurité (ex: gouvernance de comptes de service, rotation, approbations),
 dans une posture **Zero Trust**.
 
-> ⚠️ **Stratégie “Privé puis Public”**  
-> Le projet contient de la logique de sécurité (même si Zero Trust). Le dépôt doit rester **Privé** tant
-> que la checklist “Avant de passer en Public” n’est pas validée.
-
 ## Documentation
 
 - **Architecture / SAD (document maître)** :
@@ -117,13 +113,13 @@ dotnet restore
   dotnet build -c Release
   ```
 
-## Sécurité — Avant de passer en Public (checklist)
+## Sécurité — checklist
 
-- [ ] **Scan de secrets** (historique git complet) : TruffleHog et/ou git-secrets
-- [x] **Licence** : `LICENSE` (AGPLv3) à la racine
-- [ ] **Security policy** : `SECURITY.md` (reporting privé, pas d’issue publique)
-- [ ] **Rulesets** activés sur `master` (PR obligatoire, checks, linear history, no bypass)
-- [ ] **Documentation** à jour (README + Wiki + runbooks)
+- [x] **Scan de secrets** (historique git complet) : TruffleHog et/ou git-secrets
+- [x] **Licence** : respecter la `LICENSE` (AGPLv3) 
+- [x] **Security policy** : `SECURITY.md` (reporting privé, pas d’issue publique)
+- [x] **Rulesets** activés sur `master` (PR obligatoire, checks, linear history, no bypass)
+- [x] **Documentation** à jour (README + Wiki + runbooks)
 
 Scripts de scan (optionnels) : [`/scripts/security/`](scripts/security/)
 
