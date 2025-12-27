@@ -1,6 +1,7 @@
-# [badge CI] [badge license]
+# SAGAPI — Service Account Governance & Automation Programmable Interface
 
-## SAGAPI — Service Account Governance & Automation Programmable Interface
+![CI](https://github.com/OurITRes/sagapi/actions/workflows/ci.yml/badge.svg)
+![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)
 
 SAGAPI est un **monorepo** conçu pour fournir une **API de gouvernance** et des **connecteurs** permettant
 d’automatiser des opérations de sécurité (ex: gouvernance de comptes de service, rotation, approbations),
