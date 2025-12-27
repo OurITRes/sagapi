@@ -2,14 +2,18 @@
 
 ## SAGAPI — Service Account Governance & Automation Programmable Interface
 
-SAGAPI est un **monorepo** conçu pour fournir une **API de gouvernance** et des **connecteurs** permettant d’automatiser des opérations de sécurité (ex: gouvernance de comptes de service, rotation, approbations), dans une posture **Zero Trust**.
+SAGAPI est un **monorepo** conçu pour fournir une **API de gouvernance** et des **connecteurs** permettant
+d’automatiser des opérations de sécurité (ex: gouvernance de comptes de service, rotation, approbations),
+dans une posture **Zero Trust**.
 
 > ⚠️ **Stratégie “Privé puis Public”**  
-> Le projet contient de la logique de sécurité (même si Zero Trust). Le dépôt doit rester **Privé** tant que la checklist “Avant de passer en Public” n’est pas validée.
+> Le projet contient de la logique de sécurité (même si Zero Trust). Le dépôt doit rester **Privé** tant
+> que la checklist “Avant de passer en Public” n’est pas validée.
 
 ## Documentation
 
-- **Architecture / SAD (document maître)** : [`/docs/SAGAPI_Architecture_SAD.md`](docs/SAGAPI_Architecture_SAD.md)  
+- **Architecture / SAD (document maître)** :
+  [`/docs/SAGAPI_Architecture_SAD.md`](docs/SAGAPI_Architecture_SAD.md)  
   (source : [`/docs/architecture/Architecture.md`](docs/architecture/Architecture.md))
 - **Gouvernance (WIP)** : [`/docs/GOVERNANCE.md`](docs/GOVERNANCE.md)
 - **Runbooks** : [`/docs/runbooks/`](docs/runbooks/)
@@ -60,7 +64,8 @@ Selon le SAD, la cible est typiquement :
 - **Docker** (services locaux : mocks, DB, etc.)
 
 > ✅ Le dépôt est actuellement un **squelette** (placeholder `.gitkeep`).  
-> Les commandes ci-dessous sont fournies comme **conventions** et seront finalisées lorsque le tooling sera présent (ex: `package.json`, `nx.json`, solutions .NET, etc.).
+> Les commandes ci-dessous sont fournies comme **conventions** et seront finalisées lorsque le tooling sera
+> présent (ex: `package.json`, `nx.json`, solutions .NET, etc.).
 
 ## Installation (WIP)
 

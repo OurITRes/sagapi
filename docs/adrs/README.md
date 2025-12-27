@@ -1,6 +1,7 @@
 # ADRs (Architecture Decision Records)
 
-Les ADRs documentent les décisions importantes (authN/authZ, secrets, stockage, flux, etc.).
+Les ADRs documentent les décisions importantes
+(authN/authZ, secrets, stockage, flux, etc.).
 
 ## Règles
 

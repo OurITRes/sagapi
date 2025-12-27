@@ -1,6 +1,7 @@
 # Gouvernance — SAGAPI (WIP)
 
-Cette gouvernance vise à rendre SAGAPI **prêt pour l’Open Source** tout en conservant une posture **Security-first** et une trajectoire **Privé → Public**.
+Cette gouvernance vise à rendre SAGAPI **prêt pour l’Open Source** tout en
+conservant une posture **Security-first** et une trajectoire **Privé → Public**.
 
 ## 0) Portée
 
@@ -39,7 +40,8 @@ Référence : `docs/governance/Maintainers.md`
 
 - Fichier : `.github/CODEOWNERS`
 - Objectif : forcer des revues sur zones sensibles (infra, auth, CI, scripts security).
-- Règle : activer “Require review from Code Owners” dans le ruleset de la branche protégée.
+- Règle : activer “Require review from Code Owners” dans le ruleset de
+          la branche protégée.
 
 ## 4) Stratégie de branches
 
@@ -83,7 +85,8 @@ Doc pas à pas : `docs/governance/Rulesets.md`
 - Vérifie les fichiers de gouvernance requis
 - Lance un scan secrets via **TruffleHog** (git scan)
 
-> Quand le code arrive (Nx/.NET/etc.), il faudra ajouter des jobs `build` / `test` à ce workflow.
+> Quand le code arrive (Nx/.NET/etc.), il faudra ajouter des jobs
+  `build` / `test` à ce workflow.
 
 ## 8) Gestion des secrets
 
@@ -145,13 +148,15 @@ Doc : `docs/governance/GitHub_Projects.md`
 - Source de vérité = `/docs`
 - Pages Wiki (source) : `docs/wiki/*`
 - Runbooks : `docs/runbooks/*`
-- Architecture SAD entrypoint : `docs/SAGAPI_Architecture_SAD.md` (redirige vers `docs/architecture/Architecture.md`)
+- Architecture SAD entrypoint : `docs/SAGAPI_Architecture_SAD.md`
+  (redirige vers `docs/architecture/Architecture.md`)
 - ADRs : `docs/adrs/`
 
 ## 13) Dépendances & mises à jour (Dependabot)
 
 - Config : `.github/dependabot.yml`
-- Objectif : garder les GitHub Actions à jour (minimum). Étendre à npm/nuget quand les manifests existent.
+- Objectif : garder les GitHub Actions à jour (minimum).
+             Étendre à npm/nuget quand les manifests existent.
 
 ## 14) Checklist “Privé → Public” (Gate final)
 
